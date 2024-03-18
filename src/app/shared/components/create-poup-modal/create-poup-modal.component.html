@@ -1,0 +1,36 @@
+<!-- Modal header -->
+<div class="modal-header">
+  <!-- Title of the modal -->
+  <h4 class="modal-title pull-left">{{ title }}</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+
+<!-- Modal body -->
+<div class="modal-body">
+  <!-- Form for crear a new folder -->
+  <form [formGroup]="createFolder">
+    <div class="form-floating mb-3">
+      <!-- Input field for folder name -->
+      <input type="text" class="form-control" id="floatingInput" placeholder="New Folder" formControlName="folderName">
+      <label for="floatingInput">Folder Name</label>
+      <!-- Error messages for folder name validation -->
+      <div class="error-notification"
+        *ngIf="createFolder.get('folderName').hasError('required') && (createFolder.get('folderName').dirty || createFolder.get('folderName').touched)">
+        Please enter a folder name.</div>
+      <div class="error-notification"
+        *ngIf="createFolder.get('folderName').hasError('minlength') && (createFolder.get('folderName').dirty || createFolder.get('folderName').touched)">
+        Folder name must be at least 3 characters long.</div>
+    </div>
+  </form>
+</div>
+
+<!-- Modal footer -->
+<div class="modal-footer">
+  <!-- Button to close the modal -->
+  <button type="button" class="btn btn-default" (click)="bsModalRef.hide()">{{ closeBtnName }}</button>
+  <!-- Button to create a new folder -->
+  <button type="button" class="btn btn-primary" (click)="createNewFolder()"
+    [disabled]="!createFolder.valid || createButton">{{ createBtnName }}</button>
+</div>

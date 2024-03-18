@@ -1,0 +1,14 @@
+<!-- Check if there are files in the files array -->
+<ng-container *ngIf="files.length > 0">
+  <!-- Bind each file item to the fileItem input property of the app-file component -->
+  <app-file *ngFor="let file of files" [fileItem]="file"></app-file>
+</ng-container>
+
+<!-- If there are no files in the files array, display a message -->
+<ng-container *ngIf="files.length === 0">
+  <div class="card text-center mt-3">
+    <div class="card-body">
+      No Folder Found
+    </div>
+  </div>
+</ng-container>

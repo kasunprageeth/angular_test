@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap";
+
+.main-content {
+    margin-left: 100px;
+    overflow: hidden;
+}
+.page-content {
+    padding: calc(94px) calc(18px) 60px;
+}
+.icon-font-24 {
+    font-size: 24px;
+}
+.w-100 {
+    width: 100% !important;
+}
+.align-middle {
+    vertical-align: middle !important;
+}
+.font-size-14 {
+    font-size: 14px;
+}
+.fw-300 {
+    font-weight: 300;
+}

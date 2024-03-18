@@ -1,0 +1,22 @@
+.page-topbar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 1002;
+    background-color: #ffff;
+    box-shadow: rgba(18, 38, 63, 0.03) 0px 0.75rem 1.5rem;
+}
+.header-profile-user {
+    height: 36px;
+    width: 36px;
+    background-color: #f8f9fa;
+    padding: 3px;
+}
+.btn-border {
+    border-radius: 24px;
+}
+.btn-coustom {
+    background-color: #0F3C32;
+    color: #C8FE02;
+}

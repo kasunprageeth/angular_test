@@ -1,0 +1,37 @@
+<div class="email-leftbar card">
+  <button type="button" class="btn btn-coustom btn-block">
+    <i class="bx bx-plus-circle"></i> Create
+  </button>
+  <div class="mail-list mt-4">
+    <a href="javascript: void(0);" class="active">Inbox <span class="ms-1 float-end">322</span></a>
+    <a href="javascript: void(0);">In Progress <span class="ms-1 float-end">452</span></a>
+    <a href="javascript: void(0);">Completed <span class="ms-1 float-end">152</span></a>
+    <a href="javascript: void(0);">Rejected <span class="ms-1 float-end">12</span></a>
+    <a href="javascript:void(0);" (click)="toggleMore()">More <span class="ms-1 float-end">
+        <!-- Icon to indicate toggle state -->
+        <i class="icon-font-24 bx" [ngClass]="{'bx-chevron-right': !showMore, 'bx-chevron-down': showMore}"></i>
+      </span></a>
+    <div *ngIf="showMore">
+      <!-- Content to show when "More" is clicked -->
+      <a href="javascript:void(0);"><i class="mdi mdi-trash-can-outline me-2"></i>Trash</a>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="mail-list mt-1">
+    <a href="javascript: void(0);">Draft</a>
+    <a href="javascript: void(0);">Favorites</a>
+    <a href="javascript: void(0);">Archive</a>
+
+    <!-- Link to open modal for folder create -->
+    <a href="javascript: void(0);"><span class="bx bx-plus-circle text-danger float-end icon-font-24"
+        (click)="openModal()"></span>Folders</a>
+
+    <!-- Component to manage labels -->
+    <ng-scrollbar>
+      <label-management></label-management>
+    </ng-scrollbar>
+
+  </div>
+</div>

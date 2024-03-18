@@ -1,0 +1,41 @@
+.email-leftbar {
+    width: 236px;
+    float: left;
+    padding: 20px;
+    border-radius: 5px;
+}
+.card {
+    margin-bottom: 24px;
+    background-color: #F0F0F0 !important;
+    box-shadow: rgba(18, 38, 63, 0.03) 0px 0.75rem 1.5rem;
+}
+.mail-list {
+  a {
+    display: block;
+    color: rgba(0, 0, 0, 1);
+    line-height: 24px;
+    padding: 8px 5px;
+    text-decoration: none !important;
+    &.active {
+      border-radius: 5px;
+      background-color: #D7D7D7;
+    }
+  }
+}
+.mail-list a:hover {
+  border-radius: 5px;
+  background-color: #D7D7D7;
+}
+.btn-coustom {
+  background-color: #C8FE02 !important;
+  border-color: black;
+  border-width: 2px;
+}
+ng-scrollbar {
+  --scrollbar-size: 8px;
+  --scrollbar-thumb-color: gray;
+  --scrollbar-hover-size: 12px;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+  --scrollbar-border-radius: 10px;
+  height: 100px;
+}

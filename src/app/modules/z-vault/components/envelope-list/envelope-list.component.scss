@@ -1,0 +1,37 @@
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+.avatar-xs {
+    height: 2rem;
+    width: 2rem;
+}
+.avatar-title {
+    align-items: center;
+    background-color: #556ee6;
+    color: #fff;
+    display: flex;
+    font-weight: 500;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+}
+a {
+    text-decoration: none !important;
+}
+.text-color {
+    color: #556ee6;
+}
+ng-scrollbar {
+  --scrollbar-size: 8px;
+  --scrollbar-thumb-color: gray;
+  --scrollbar-hover-size: 12px;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.05);
+  --scrollbar-border-radius: 10px;
+
+  height: 526px;
+}
+.icon-list {
+    text-decoration: none !important;
+    display: block;
+}

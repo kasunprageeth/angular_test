@@ -1,0 +1,18 @@
+<div class="file-tree-item">
+  <div class="file-content">
+    <!-- Folder icon -->
+    <i class='bx bx-folder'></i>
+    <!-- Folder name -->
+    <div class="text-capitalize">{{fileItem.label}}</div>
+    <!-- create folder icon -->
+    <i class='bx bx-plus-circle float-end ms-4' title="Create folder" (click)="openPopUp(fileItem)"></i>
+    <!-- remove folder icon -->
+    <i class='bx bx-trash float-end' title="Remove folder" (click)="removeFolder(fileItem)"></i>
+  </div>
+
+  <!-- Children files section -->
+  <div *ngIf="fileItem.children" class="children">
+    <!-- Recursive rendering of child files -->
+    <app-file *ngFor="let child of fileItem.children" [fileItem]="child"></app-file>
+  </div>
+</div>

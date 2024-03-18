@@ -1,0 +1,26 @@
+.file-tree-item {
+    min-height: 30px;
+}
+
+.file-tree-item .file-content {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+}
+
+.file-tree-item .file-content .bx-plus-circle,
+.file-tree-item .file-content .bx-trash {
+    display: none;
+    position: absolute;
+    left: 78%;
+}
+
+.file-tree-item .file-content:hover .bx-plus-circle,
+.file-tree-item .file-content:hover .bx-trash {
+    display: inline;
+}
+
+.file-tree-item .children {
+    padding-left: 20px;
+}
